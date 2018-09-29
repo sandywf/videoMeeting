@@ -1,0 +1,28 @@
+#smileBox {
+    background: #fff;
+    padding: 6px;
+    position: absolute;
+    z-index: 999999;
+}
+
+#smileBox ul {
+    height: auto;
+    overflow: hidden;
+    width: 250px;
+}
+
+#smileBox li {
+    float: left;
+}
+
+#smileBox li img {
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: block;
+    padding: 2px;
+    width: 25px;
+}
+
+#smileBox li img:hover {
+    border-color: #dfe6f6;
+}

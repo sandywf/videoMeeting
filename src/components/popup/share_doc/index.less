@@ -1,0 +1,90 @@
+@import '~@/config/theme.less';
+
+//共享文档
+.text-over-ellipsis(){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.share-doc{
+	.share-list{
+		min-height: 200px;
+		max-height: 400px;
+		//overflow: auto;
+		width: 650px;
+		border: #aaa 1px solid;
+		border-radius: 4px;
+		margin: 30px auto 20px;
+		font-size: 14px;
+		>div{
+			max-height: inherit;
+		}
+		:global{
+			.iScrollVerticalScrollbar.iScrollLoneScrollbar{
+				transition : opacity 500ms; 
+				transition-duration: 500ms;
+			}
+		}
+		&:hover{
+			:global{
+				.iScrollVerticalScrollbar.iScrollLoneScrollbar{
+					opacity: 1 !important;
+				}
+			}
+		}
+		ul{
+			min-height: 100%;
+		}
+		li{
+			display: flex;
+			line-height: 34px;
+			padding: 0px 15px;			
+			&.doc-none{
+				display: block;
+				line-height: 180px;
+				text-align: center;
+				color: #bfbfbf;
+				font-size: 18px;
+			}
+			.doc-title{
+				width: 280px;
+				margin-right: 20px;
+				.text-over-ellipsis();
+			}
+			.doc-source-name{
+				width: 180px;
+				margin-right: 20px;
+				.text-over-ellipsis();
+			}
+			.doc-options{
+				margin-left: auto;
+				i{
+					font-size: 22px;
+					padding: 4px;
+					margin-left: 2px;
+					cursor: pointer;
+					vertical-align: middle;
+					border-radius: 4px;
+					&.no-event{
+						pointer-events: none;
+					}
+					&:hover{
+						color: #ffffff;
+						background: @deepGray - #222;
+					}
+					&:global{
+						&.icon-locking{
+							color: @green;
+						}
+					}
+				}
+			}
+		}
+	}
+	.share-doc-upload{
+		margin: 20px auto;
+	}
+	
+	
+}

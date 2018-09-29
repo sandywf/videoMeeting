@@ -1,0 +1,214 @@
+/*鏁翠綋寮忓脊鍑哄眰-瑕嗙洊鏁翠釜椤甸潰*/
+@import '~@/config/theme.less';
+
+.eulaDialog{
+    .dialog-modal{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        overflow: hidden;
+        outline: 0;
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.36, 1.1, 0.2, 1);
+        &.in{ opacity: 1; }
+        &.drag-layer{
+            .dialog-modal-wrap{
+                display: block;
+                .dialog-modal-table{
+                    display: block;
+                    position: absolute;
+                    .dialog-modal-header{
+                    	cursor: move;
+                    }
+                }
+            }
+        }
+        &.has-mask{
+            position: fixed !important;
+        }
+        .dialog-modal-backdrop{
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            background-color: #000;
+            transition: all 0.5s cubic-bezier(0.36, 1.1, 0.2, 1);
+        }
+        .dialog-modal-wrap{
+            display: table;
+            height: 100%;
+            margin: 0 auto;
+            .dialog-modal-table{
+                display: table-cell;
+                vertical-align: middle;
+                position: relative;
+                width: auto;
+                .dialog-modal-content{
+                    position: relative;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    outline: 0;
+                    box-shadow: 0 8px 28px rgba(0, 0, 0, .3);
+                    border-radius: 2px;
+                    .dialog-modal-header {
+                        line-height: 38px;
+                        height: 38px;
+                        border-bottom: solid 1px #cdcdcd;
+                        box-sizing: border-box;
+                        background: #575757;
+                        border-top-left-radius: 2px;
+                        border-top-right-radius: 2px;
+                        user-select:none;
+                        .dialog-modal-icon {
+                            font-size: 16px;
+                            position: absolute;
+                            left: 20px;
+                            top: 18px;
+                            display: none;
+                        }
+                        .dialog-modal-title {
+                            margin: 0 20px;
+                            color: #ececec;
+                            line-height: 38px;
+                        }
+                        .dialog-modal-close {
+                            display: inline-block;
+                            height: 38px;
+                            line-height: 38px;
+                            text-align: center;
+                            width: 38px;
+                            right: 0px;
+                            top: 0px;
+                            position: absolute;
+                            font-weight: bold;
+                            cursor: pointer;
+                            border-top-right-radius: 2px;
+                            &:hover {
+                                background-color: rgba(204, 204, 204, 0.5);
+                            }
+                        }
+                    }
+                    .dialog-modal-body {
+                        position: relative;
+                        min-width: 300px;
+                        min-height: 200px;
+                        color: #666;
+                        padding: 1px;
+                    }
+                    .dialog-modal-footer {
+                        border-bottom-left-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                        user-select:none;
+			        	text-align: center;
+			        	height: 50px;
+			        	padding: 0px 10px 10px;
+                    }
+                    .dialog-btn {
+                        border: 1px solid transparent;
+                        outline: none;
+                        user-select: none;
+                        font-size: 14px;
+                        font-weight: normal;
+                        cursor: pointer;
+                        line-height: 30px;
+                        text-align: center;
+                        border-radius: 2px;
+                        padding: 0 12px;
+                        min-width: 80px;
+                        margin-left: 20px;
+                        box-sizing: content-box;
+	        			&:first-child{
+	        				margin-left: 0px;
+	        			}
+                        &.close {
+                            background: #dedede;
+                            color: #333333;
+                            &:hover {
+                                background: #f1f1f1;
+                            }
+                        }
+                        &.default {
+                            background: @green;
+                            color: #ffffff;
+                            &:hover {
+                                background: @greenTag;
+                            }
+                        }
+                        &[disabled]{
+                            pointer-events: none;
+                            opacity: 0.5;
+                        }
+                        &.uploadBtn{
+                            background: #ffffff;
+                            border-color: #999;
+                            line-height: 28px;
+                            color: #999;
+                            padding: 0px 5px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 60px;
+                            margin-left: 10px;
+                            &:hover{
+                                color: #73a53f;
+                                border-color: #73a53f;
+                                background: #f9f9f9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dialog-modal.tipPop{
+        &.dialog-modal{
+            position:static;
+            opacity: 1;
+            .dialog-modal-table{
+                z-index: 1001;
+                .dialog-modal-content{
+                    transition: all 0.5s cubic-bezier(0.36, 1.1, 0.2, 1);
+                    opacity: 0;
+                    background: #888888;
+                    .dialog-modal-body{
+                        z-index: 1001;
+                        padding: 10px 20px;
+                        min-height: 0px !important;
+                        min-width: 180px !important;
+                        color: #ffffff;
+                    }
+                }
+            }
+            &.in{
+                .dialog-modal-content{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+   	#confirmPop,#alertPop{
+    	.dialog-modal-wrap{
+    		.dialog-modal-body{
+	        	padding: 30px 20px;
+	            min-height: 0px;
+	            text-align: center;
+	       }
+    	}
+    }
+    #fullScreen{
+    	.dialog-modal-body{
+    		position: fixed !important;
+    		top: 0px;
+    		left: 0px;
+    		right: 0px;
+    		bottom: 0px;
+    	}
+    }
+}
+
+

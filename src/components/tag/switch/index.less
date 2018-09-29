@@ -1,0 +1,52 @@
+@import '~@/config/theme.less';
+//通用组件样式
+
+//展开，关闭按钮
+.switch{
+	text-align: center;
+	line-height: 20px;
+	position: relative;
+	cursor: pointer;
+	
+	transition: opacity 0.3s;
+	span{
+		position: absolute;
+		display: inline-block;
+		top: 2px;
+		left: 50%;
+		width: 80px;
+		height: 11px;
+		overflow: hidden;
+		transform: translate(-50%,0px) scaleY(0.8);
+		text-align: center;
+		&:after{
+			content: "";
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: #515151;
+			transform:  rotate(-45deg);
+			box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.3);
+		}
+	}
+	canvas{
+		vertical-align: bottom;
+	}
+	&:hover{
+		opacity: 1 !important;
+		span:after{
+			box-shadow : 0px 0px 2px 1px rgba(255,255,255,0.8);
+			background : #515151+#333;
+		}
+	}
+	&.close{
+		opacity: 0.6;
+		span{
+			top: 4px;
+			transform: translate(-50%,0px) scaleY(0.8) rotate(180deg);
+		}
+	}
+}
+
+
+

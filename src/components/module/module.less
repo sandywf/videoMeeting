@@ -1,0 +1,76 @@
+//引入公共的less配置
+@import '~@/config/theme.less';
+
+
+.module{
+    //::-webkit-scrollbar {width: 1px;height:6px}
+    //::-webkit-scrollbar-track-piece{background-color: #eee;margin: -2px;}
+    //::-webkit-scrollbar-thumb{background: #aaa;min-height: 150px;min-width: 150px;border-radius: 10px;}
+    //::-webkit-scrollbar-thumb:vertical:hover{background: #555555}
+    //::-webkit-scrollbar-thumb:horizontal:hover{background: #555555}
+    flex: 1;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .header{
+        position: relative;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: @lineTagBg ;
+        .title{
+            color: #ececec;
+            font-size: 14px;
+        }
+        .title-op{
+            position: absolute;
+            right: 8px;
+            top: 0;
+            i{
+                font-size: 20px;
+                padding: 0 4px;
+                color: #ececec;
+            }
+        }
+    }
+
+    // 白板和视屏定高
+    &.video,
+    &.pad{
+        height: 208px;
+        flex: 0 1 auto;
+    }
+
+    &.showVideo.video{
+        height: auto;
+    }
+
+    // 折叠状态
+    &.fold{
+        height: 30px;
+        flex: 0 1 auto;
+    }
+
+    &.user{
+        background: #eee;
+    }
+
+    &.note{
+        display: flex;
+        flex-direction: column;
+        .note-area{
+            flex-grow: 1;
+            height: 100%;
+            textarea{
+                width: 100%;
+                height: 100%;
+                border: none;
+                padding: 6px;
+                font-size: 14px;
+                color: #606060;
+                resize: none;
+            }
+        }
+    }
+}

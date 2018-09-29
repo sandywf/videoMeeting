@@ -1,0 +1,143 @@
+@import '~@/config/theme.less';
+.user-content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #efefef;
+    border-bottom: 1px solid #fff;
+    height: calc(100% - 30px);
+    .tab {
+        display: flex;
+        background: #dedede;
+        border-bottom: 1px solid #cecece;
+        .item {
+            width: 50%;
+            line-height: 40px;
+            color: #aaa;
+            display: inline-flex;
+            justify-content: center;
+            cursor: pointer;
+            i {
+                font-size: 30px;
+            }
+            span {
+                font-size: 14px;
+            }
+            &:hover {
+                background: #cdcdcd;
+            }
+        }
+    }
+    .left .tab-left, .right .tab-right {
+        color: #545454;
+    }
+    .search {
+        width: 100%;
+        padding: 8px 12px;
+        box-sizing: border-box;
+        input {
+            font-size: 14px;
+            width: 100%;
+            border: none;
+            background: #fff;
+            padding: 4px 8px;
+            border-radius: 16px;
+        }
+    }
+    .scroll-wrap {
+        display: flex;
+        flex: 1;
+    }
+    .user-list {
+        text-align: left;
+        padding: 0 12px;
+        .user-item {
+            display: flex;
+            line-height: 32px;
+            font-size: 14px;
+            .role {
+                width: 24px;
+                color: #000;
+            }
+            .username {
+                flex: 2;
+                color: #808080;
+                overflow: hidden
+            }
+            .more-op {
+                font-size: 28px;
+                color: #ccc;
+                cursor: pointer;
+                &.active {
+                    border: 2px solid #efefef;
+                    border-radius: 50%;
+                    left: -2px;
+                    position: relative;
+                    z-index: 1;
+                    color: #333333;
+                    line-height: 1;
+                }
+            }
+            .op-list {
+                display: flex;
+                height: 32px;
+                position: absolute;
+                background: #333;
+                left: 12px;
+                right: 16px;
+                border-radius: 16px;
+                .op-item {
+                    cursor: pointer;
+                    margin-left: 10px;
+                    i {
+                        font-size: 24px;
+                    }
+                    
+                }
+            }
+            .state-list {
+                display: flex;
+                height: 32px;
+                .op-item {
+                    cursor: pointer;
+                    margin-left: 4px;
+                    &>i {
+                        font-size: 18px;
+                        position: relative;
+                        color: #a1a1a1;
+                        i.disable{
+                            position: absolute;
+                            font-size: 12px;
+                            color: red;
+                            font-weight: 700;
+                            bottom: -10px;
+                            right: 3px;
+                        }
+                    }
+                    &.active>i{
+                        color: #1bc840; 
+                    }
+                }
+            }
+            .op-item>i {
+                padding: 0 4px;
+                position: relative;
+                color: #cacaca;
+                
+                i.disable{
+                    position: absolute;
+                    font-size: 12px;
+                    color: red;
+                    font-weight: 700;
+                    bottom: -10px;
+                    right: 3px;
+                }
+                &.active{
+                    color: @green;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

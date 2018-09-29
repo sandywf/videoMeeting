@@ -1,0 +1,58 @@
+/**
+ * 整体样式
+ */
+ 
+ 
+ @black : #1c1c1c;
+ @green : #1bc840;
+ @greenHover : @green + #333;
+ @greenTag :  @green - #333;
+ @deepGreen : #2dd551;
+ @gray : #d0d0d0;
+ @deepGray :#858986;
+ @red : #c03131;
+ @lightRed : red;
+ 
+ @headBg : #373737;
+ @promptColor : #e0e0e0;
+ 
+ @lineTagBg : linear-gradient(to bottom,#515151 0%, #5b5b5b 25%,#3e3e3e 100%);
+ @selectTagBg :  linear-gradient(to bottom,#808080 0%, #787878 25%,#626262 100%);
+ 
+ /**
+  * vidoe 相关
+  */
+ @videoIconBg  : rgba(0,0,0,0.5);
+ @videoTitleBg : rgba(0,0,0,0.5);
+ 
+ 
+ @disableIcon : @lightRed;
+	
+//红色字
+.red-letter{
+	color: @red;
+}
+
+.green-letter{
+	color: @green !important;
+}
+
+.green-bg{
+	background-color: @green !important;
+}
+
+
+//图片按钮
+.btn-icon{
+	cursor: pointer;
+	color: white;
+	&:hover{
+		color: @green;
+	}
+	&.active{
+		color: @green;
+		&:hover{
+			color: @greenHover;
+		}
+	}
+}

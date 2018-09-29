@@ -1,0 +1,41 @@
+.content {
+    padding: 24px 12%;
+    .tips {
+        font-size: 14px;
+        color: #808080;
+    }
+    .title {
+        display: flex;
+        height: 50px;
+        background: #e6e6e6;
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+        align-items: center;
+        text-align: center;
+        margin-top: 8px;
+        span:first-child {
+            width: 30%
+        }
+        span:last-child {
+            flex: 1
+        }
+    }
+    .list li div {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        line-height: 32px;
+        border: 1px solid #ddd;
+        border-top: none;
+        span:first-child {
+            width: 30%
+        }
+        span:last-child {
+            flex: 1
+        }
+        &.empty {
+            background: #f0f0f0;
+        }
+    }
+}

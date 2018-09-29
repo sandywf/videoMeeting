@@ -1,0 +1,288 @@
+.message-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #FFF;
+    .tab {
+        display: flex;
+        flex-shrink: 0;
+        background: #dedede;
+        border-bottom: 1px solid #cecece;
+        .item{
+            width: 50%;
+            line-height: 40px;
+            color: #545454;
+            display: inline-flex;
+            justify-content: center;
+            position: relative;
+
+            .itemHerder{
+              text-align: center;
+              width: 80px;
+              height: 20px;
+              background-color: reba(102, 102, 102, 0.7);
+            }
+            i{
+                font-size: 30px;
+                color: #666;
+            }
+            span{
+                font-size: 14px;
+            }
+    
+            &:hover,
+            &.active{
+                background: #cdcdcd;
+            }
+
+            .number{
+                position: absolute;
+                font-size: 12px;
+                color: #fff;
+                background: red;
+                width: 22px;
+                line-height: 22px;
+                text-align: center;
+                border-radius: 50%;
+                overflow: hidden;
+                right: 8px;
+                top: 5px;
+                transform: scale(.8);
+            }
+        }
+    }
+
+    .message-list {
+        padding: 8px;
+        flex-grow: 1;
+
+        .itemHerder{
+          text-align: center;
+          width: 80px;
+          height: 20px;
+          background-color: rgba(102, 102, 102, 0.2);
+          border-radius: 20px;
+          margin-left: 35%;
+          margin-top: 15px;
+        }
+
+        .item{
+            display: flex;
+            margin-top: 12px;
+            .avatar{
+                width: 24px;
+                height: 24px;
+                overflow: hidden;
+               img{
+                   width: 100%;
+               }
+            }
+
+            .info{
+                display: flex;
+                flex-grow: 1;
+                font-size: 14px;
+                margin-left: 8px;
+                flex-direction: column;
+                align-items: flex-start;
+                .username{
+                    color: #545454;
+                    margin-bottom: 2px;
+                }
+                .content{
+                    padding:4px 8px;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    position: relative;
+                    background: #efefef;
+                    min-width: 70%;
+                    border-radius: 2px;
+                    
+                }
+            }
+        
+            &.me{
+               .avatar {
+                   order: 1;
+               }
+               .info {
+                align-items: flex-end;
+                margin: 0;
+                margin-right: 8px;
+               }
+            }
+
+            &.system-item{
+                font-size: 14px;
+                .name{
+                    color: #64c055;
+                    display: inline-block;
+                    margin: 0 4px;
+                    cursor: pointer;
+                }
+            }   
+        }
+    }
+
+    // 开启私聊的用户列表
+    .scroll-list{
+        display: flex;
+        align-items: center;
+        height: 36px;
+        flex-shrink: 0;
+        .single-talk-list {
+            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            ul{
+                transition: transform 0.5s;
+            }
+            li{
+                width: 72px;
+                padding: 7px 8px;
+                line-height: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+                cursor: pointer;
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+                background: #a2a2a2;
+                border: 2px solid #ffffff;
+                position: relative;
+                vertical-align: middle;
+                &.active{
+                    background: #64c055;
+                }
+
+                .close{
+                    display: none;
+                    position: absolute;
+                    right: 2px;
+                    top: 4px;
+                    color: red;
+                    font-size: 12px;
+                    font-weight: bolder;
+                    background: #fff;
+                    padding: 2px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    transform: scale(.8);
+                }
+
+                &:hover .close{
+                    display: block;
+                }
+
+                .has-msg {
+                    position: absolute;
+                    top: 2px;
+                    right: 4px;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background: red;
+                }
+            }
+        }
+    }
+
+    // 发送消息控制
+    .send-content{
+        font-size: 14px;
+        .tool-bar{
+            position: relative;
+            padding: 0 8px;
+            display: flex;
+            background: #cdcdcd;
+            line-height: 28px;
+            color: #545454;
+        } 
+
+        .face-btn{
+            width: 18px;
+            margin-left: 6px;
+            img{
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        .to{
+            padding: 0 6px;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .msg-input textarea{
+            width: 100%;
+            height: 62px;
+            resize: none;
+            padding: 4px 8px;
+            border: none;
+            border: none;
+        }
+
+        .submit {
+            text-align: right;
+            padding: 0 8px 8px 0;
+            .btn {
+                color: #fff;
+                font-size: 12px;
+                padding: 4px 16px;
+                background: #aaa;
+                cursor: pointer;
+                border-radius: 2px;
+            }
+        }
+
+        .user-list{
+            position: absolute;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            box-shadow: 0 0 13px 1px #0000005e;
+            cursor: pointer;
+            bottom: 32px;
+            width: 108px;
+            height: 232px;
+            overflow-y: auto;
+            z-index: 9999;
+
+            li{
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .triangle-down {
+        width: 0;
+        height: 0;
+        margin: 0 4px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #8a8a8a;
+        display: inline-block;
+    }
+    
+    .triangle-left {
+        width: 0;
+        margin: 0 1px 0 4px;
+        height: 0;
+        border-top: 13px solid transparent;
+        border-right: 12px solid #bbbbbb;
+        border-bottom: 13px solid transparent;
+    }
+    
+    .triangle-right {
+        width: 0;
+    margin: 0 1px 0 4px;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-left: 12px solid #bbbbbb;
+    border-bottom: 13px solid transparent;
+    }
+}

@@ -1,0 +1,163 @@
+@import "~@/config/theme.less";
+
+
+.video-item{
+    border: 1px solid #222;
+    background: #404040;
+    position: relative;
+    &.video-item-watch{
+    	z-index: 3;
+    	border-color: transparent;
+    	background: transparent;
+    	.inner img{
+    		display: none;
+    	}
+    }
+    &.video{
+    	.video-op{
+    		>i{
+    			font-size: 16px;
+    			line-height: 24px;
+    			width: 24px;
+    		}
+    	}
+    	.user-Info{
+    		font-size: 12px;
+    	}
+    }
+
+    .inner,
+    video{
+        width: 100%;
+        height: 100%;
+    }
+
+    .empty-icon{
+        width: 20%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .video-op {
+        position: absolute;
+        color: #ccc;
+        display: flex;
+		justify-content: flex-start;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        padding: 7px;
+        >i{
+        	display: none;
+        	font-size: 22px;
+        	border-radius: 4px;
+        	margin-right: 5px;
+        	color: white;
+        	width: 33px;
+        	line-height: 33px;
+        	text-align: center;
+        	cursor: pointer;
+        	position: relative;
+        	&.overflow{
+        		display: inline-block;
+        		color: @gray;
+        	}
+			&:global{
+				&.icon-quxiaoshuangping{
+					display: inline-block;
+					color: @green;
+				}
+				&.icon-exit-full-screen-s{
+					display: inline-block;
+					color: @green;
+				}
+			} 
+			
+        	>i{
+        		color:@disableIcon;
+        		display: inline-block;
+        		line-height: 1;
+        		bottom: 5px;
+        		right: 5px;
+        		font-size: 16px;
+        		font-weight: bold;
+        		position: absolute;
+        	}
+        	&:hover{
+        		color: @green;
+        	}
+        	&:last-child{
+        		margin-left: auto;
+        		margin-right: 0px;
+        	}
+        	
+        }
+    }
+    &.has-video{
+    	&.full-video,&:hover{
+	    	border: 1px solid #bfbfbf;
+	    	box-shadow: 0 0 5px 0px #bfbfbf;
+	    	z-index: 10;
+	    	.video-op>i{
+		        display: inline-block;
+		        background: @videoIconBg;
+		    }
+		    .user-Info{
+		    	.user-title{
+		    		background: @videoIconBg;
+	        		color: white;
+		    	}
+		    }
+		}
+		&.full-video{
+			border-color: transparent;
+			box-shadow:none;
+		}
+    }
+
+    .user-Info{
+    	font-family: "微软雅黑" !important;
+        position: absolute;
+        bottom: 7px;
+        left: 7px;
+        max-width: calc( 100% - 30px );
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 13px;
+        color: #ccc;
+        .user-title{
+        	display: inline-block;
+        	padding: 0px 8px;
+        	line-height: 30px;
+        	border-radius: 4px;
+        }
+        &.polling{
+        	padding-left:22px;
+        	left : 20px;
+        	.user-role{
+	        	position: absolute;
+	        	width: 18px;
+	        	height: 18px;
+	        	left: 0px;
+	        	top: 50%;
+	        	transform: translateY(-50%) scale(0.9);
+	        	border-radius: 10px;
+	        	line-height: 18px;
+	        	text-align: center;
+	        	font-size: 12px;
+	        	&.main{
+	        		background: @green;
+	        		color: white;
+	        	}
+	        	&.speaker{
+	        		background: white;
+	        		color: @deepGray;
+	        	}
+	        }
+        }
+        
+    }
+}

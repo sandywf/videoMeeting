@@ -1,0 +1,58 @@
+//引入公共的less配置
+@import '~@/config/theme.less';
+
+.video-content {
+    flex: 1;
+    background: #333;
+    position: relative;
+	overflow: hidden;
+    .header{
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        background: @lineTagBg;
+        color: #ececec;
+        .mode{
+            font-size: 14px;
+        }
+        .full-screen{
+            float: right;
+            font-size: 22px;
+            margin-right: 12px;
+            cursor: pointer;
+            &:hover{
+            	color: @green;
+            }
+            &:global{
+            	&.icon-exit-fullscreen{
+            		color: @green;
+            		&:hover{
+            			color: @green+#333;
+            		}
+            	}
+            }
+        }
+    }
+    &.pad{
+        .video-wrap {
+            top: calc(50% + 16px);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+    }
+
+    &.video{
+        .video-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            overflow: hidden;
+        }
+    }
+}

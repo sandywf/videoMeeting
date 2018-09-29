@@ -1,0 +1,27 @@
+.right-bar{
+	transition: all 0.3s;
+    border-left: 1px solid #000;
+    width: 320px;
+    overflow: hidden;
+    margin-left: auto;
+	position: relative;
+	flex-shrink:0; 
+    .right-content{
+    	position: absolute;
+    	top: 0px;
+    	left: 0px;
+    	height: 100%;
+    	width: 320px;
+    	display: flex;
+    	flex-direction: column;
+   	 	align-items: stretch;
+    }
+    &.close{
+		width: 0px;
+	}	
+}
+
+#pad_wrap {
+	width: 100%;
+	height: 100%;
+}

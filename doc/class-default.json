@@ -1,0 +1,479 @@
+{
+	"director": {},
+	"json": {
+		"audioParam": {
+			"audioEncodeBitrate": 96,
+			"audioEncodeChannel": 1,
+			"automaticLevel": 0,
+			"buffer": 30,
+			"cancellationLevel": 1,
+			"enableCancellation": 1,
+			"microphone": [
+				{
+					"buffer": 30,
+					"deviceName": "@device:cm:{33D9A762-90C8-11D0-BD43-00A0C911CE86}\\麦克风 (HD Webcam C310)",
+					"displayName": "麦克风 (HD Webcam C310)",
+					"id": 1
+				}
+			],
+			"samplingFrequency": 44100,
+			"speakerParam": [
+				{
+					"deviceName": "@device:cm:{E0F158E1-CB04-11D0-BD4E-00A0C911CE86}\\扬声器 (Realtek High Definition Au",
+					"displayName": "扬声器 (Realtek High Definition Au",
+					"id": 1
+				}
+			]
+		},
+		"encoder": [
+			{
+				"id": 1,
+				"param": {
+					"audioSwitch": 1,
+					"avsync": 0,
+					"bFramFlag": true,
+					"bFrameNum": 0,
+					"bitrate": 200,
+					"encode": 0,
+					"fps": 15,
+					"gop": 25,
+					"height": 90,
+					"width": 160
+				},
+				"record": [],
+				"stream": [
+					{
+						"allSendThreshold": 25,
+						"audioQueue": 35,
+						"audioSwitch": 1,
+						"avsync": 0,
+						"flag": 11,
+						"keyFrameSendThreshold": 35,
+						"recordSwitch": 1,
+						"rtmpSwitch": 1,
+						"rtmpUri": "rtmp://127.0.0.1:1935/dms",
+						"videoQueue": 25
+					}
+				]
+			}, {
+				"id": 1,
+				"param": {
+					"audioSwitch": 1,
+					"bFramFlag": true,
+					"bFrameNum": 2,
+					"bitrate": 2000,
+					"encode": 0,
+					"fps": 25,
+					"gop": 25,
+					"height": 1080,
+					"width": 1920
+				},
+				"record": [
+					{
+						"appending": 1,
+						"audioSwitch": 1,
+						"flag": 0,
+						"recordFilename": "D:\\CodyyRecord",
+						"recordFormat": 2,
+						"recordSwitch": 0
+					}
+				],
+				"stream": []
+			}, {
+				"id": 0,
+				"param": {
+					"audioSwitch": 2,
+					"avsync": 0,
+					"bFramFlag": true,
+					"bFrameNum": 0,
+					"bitrate": 350,
+					"encode": 0,
+					"fps": 25,
+					"gop": 25,
+					"height": 180,
+					"width": 320
+				},
+				"record": [],
+				"stream": [
+					{
+						"allSendThreshold": 25,
+						"audioQueue": 35,
+						"audioSwitch": 2,
+						"avsync": 0,
+						"flag": 11,
+						"keyFrameSendThreshold": 35,
+						"recordSwitch": 1,
+						"rtmpSwitch": 1,
+						"rtmpUri": "rtmp://127.0.0.1:1935/dms",
+						"videoQueue": 25
+					}
+				]
+			}, {
+				"id": 0,
+				"param": {
+					"audioSwitch": 1,
+					"bFramFlag": true,
+					"bFrameNum": 2,
+					"bitrate": 2000,
+					"encode": 0,
+					"fps": 25,
+					"gop": 25,
+					"height": 1080,
+					"width": 1920
+				},
+				"record": [
+					{
+						"appending": 1,
+						"audioSwitch": 1,
+						"flag": 0,
+						"recordFilename": "D:\\CodyyRecord",
+						"recordFormat": 2,
+						"recordSwitch": 1
+					}
+				],
+				"stream": []
+			}, {
+				"id": 0,
+				"param": {
+					"audioSwitch": 1,
+					"avsync": 0,
+					"bFramFlag": true,
+					"bFrameNum": 0,
+					"bitrate": 2000,
+					"encode": 0,
+					"fps": 25,
+					"gop": 25,
+					"height": 1080,
+					"width": 1920
+				},
+				"record": [],
+				"stream": [
+					{
+						"allSendThreshold": 25,
+						"audioQueue": 35,
+						"audioSwitch": 1,
+						"avsync": 0,
+						"flag": 12,
+						"keyFrameSendThreshold": 35,
+						"recordSwitch": 0,
+						"rtmpSwitch": 1,
+						"rtmpUri": "rtmp://127.0.0.1:1935/dms",
+						"videoQueue": 25
+					}, {
+						"allSendThreshold": 25,
+						"audioQueue": 35,
+						"audioSwitch": 1,
+						"avsync": 0,
+						"flag": 13,
+						"keyFrameSendThreshold": 35,
+						"recordSwitch": 1,
+						"rtmpSwitch": 1,
+						"rtmpUri": "rtmp://127.0.0.1:1935/dms",
+						"videoQueue": 25
+					}
+				]
+			}, {
+				"id": 100,
+				"param": {
+					"audioSwitch": 1,
+					"avsync": 0,
+					"bFramFlag": true,
+					"bFrameNum": 0,
+					"bitrate": 4000,
+					"encode": 0,
+					"fps": 25,
+					"gop": 25,
+					"height": 1080,
+					"width": 1920
+				},
+				"record": [],
+				"stream": [
+					{
+						"allSendThreshold": 25,
+						"audioQueue": 35,
+						"audioSwitch": 1,
+						"avsync": 0,
+						"flag": 11,
+						"keyFrameSendThreshold": 35,
+						"recordSwitch": 1,
+						"rtmpSwitch": 1,
+						"rtmpUri": "rtmp://127.0.0.1:1935/dms",
+						"videoQueue": 25
+					}
+				]
+			}, {
+				"id": 100,
+				"param": {
+					"audioSwitch": 1,
+					"bFramFlag": true,
+					"bFrameNum": 2,
+					"bitrate": 4000,
+					"encode": 0,
+					"fps": 25,
+					"gop": 25,
+					"height": 1080,
+					"width": 1920
+				},
+				"record": [
+					{
+						"appending": 1,
+						"audioSwitch": 1,
+						"flag": 0,
+						"recordFilename": "D:\\CodyyRecord",
+						"recordFormat": 2,
+						"recordSwitch": 0
+					}
+				],
+				"stream": []
+			}, {
+				"id": 100,
+				"param": {
+					"audioSwitch": 1,
+					"avsync": 0,
+					"bFramFlag": true,
+					"bFrameNum": 0,
+					"bitrate": 1000,
+					"encode": 0,
+					"fps": 25,
+					"gop": 25,
+					"height": 1080,
+					"width": 1920
+				},
+				"record": [],
+				"stream": [
+					{
+						"allSendThreshold": 25,
+						"audioQueue": 35,
+						"audioSwitch": 1,
+						"avsync": 0,
+						"flag": 12,
+						"keyFrameSendThreshold": 35,
+						"recordSwitch": 0,
+						"rtmpSwitch": 1,
+						"rtmpUri": "rtmp://127.0.0.1:1935/dms",
+						"videoQueue": 25
+					}, {
+						"allSendThreshold": 25,
+						"audioQueue": 35,
+						"audioSwitch": 1,
+						"avsync": 0,
+						"flag": 13,
+						"keyFrameSendThreshold": 35,
+						"recordSwitch": 1,
+						"rtmpSwitch": 1,
+						"rtmpUri": "rtmp://127.0.0.1:1935/dms",
+						"videoQueue": 25
+					}
+				]
+			}
+		],
+		"global": {
+			"configAdaptive": 0,
+			"extendScreenShowIndex": -1,
+			"graphicsQuality": 0,
+			"networkAdaptive": {
+				"closeLowResolutionkeepTime": 10,
+				"detectTime": 60,
+				"feedbackDelayTime": 300,
+				"highBandwidthThreshold": [
+					260,
+					260
+				],
+				"highResolutionHighBitrate": [
+					2600,
+					2600
+				],
+				"highResolutionInitBitrate": [
+					2000,
+					2000
+				],
+				"highResolutionLowBitrate": [
+					1000,
+					1000
+				],
+				"highSensitivity": [
+					0.3,
+					0.3
+				],
+				"lowResolutionBitrate": 500,
+				"openLowResolutionkeepTime": 10,
+				"receiveLowResolutionkeepTime": 30,
+				"switch": 1
+			},
+			"openShareMem": 0,
+			"resolutionAdaptive": {
+				"cpuDelta": 5,
+				"cpuHighSize": 75,
+				"cpuLowSize": 65,
+				"cpuRiskySize": 85,
+				"switch": 1
+			},
+			"shareMemName": [
+				{
+					"id": 101,
+					"shareName": "RECEIVE1"
+				}, {
+					"id": 102,
+					"shareName": "RECEIVE2"
+				}, {
+					"id": 103,
+					"shareName": "RECEIVE3"
+				}
+			],
+			"vgaMovieDetect": 0
+		},
+		"preview": [
+			{
+				"displayType": 1,
+				"flag": 20,
+				"fps": 20,
+				"height": 480,
+				"id": 1,
+				"width": 640
+			}, {
+				"displayType": 1,
+				"flag": 20,
+				"fps": 25,
+				"height": 1080,
+				"id": 0,
+				"width": 1920
+			}, {
+				"displayType": 1,
+				"flag": 20,
+				"fps": 25,
+				"height": 1080,
+				"id": 100,
+				"width": 1920
+			}
+		],
+		"stitch": [
+			{
+				"fps": 25,
+				"height": 1080,
+				"id": 0,
+				"sceneTime": [
+					{
+						"scene": 1,
+						"time": 3
+					}, {
+						"scene": 2,
+						"time": 3
+					}, {
+						"scene": 3,
+						"time": 3
+					}, {
+						"scene": 4,
+						"time": 3
+					}, {
+						"scene": 5,
+						"time": 3
+					}
+				],
+				"stitchId": [
+					1
+				],
+				"stitchSpacing": 1,
+				"width": 1920
+			}, {
+				"fps": 25,
+				"height": 1080,
+				"id": 100,
+				"sceneTime": [
+					{
+						"scene": 1,
+						"time": 3
+					}, {
+						"scene": 2,
+						"time": 3
+					}, {
+						"scene": 3,
+						"time": 3
+					}, {
+						"scene": 4,
+						"time": 3
+					}, {
+						"scene": 5,
+						"time": 3
+					}
+				],
+				"stitchId": [],
+				"stitchSpacing": 1,
+				"width": 1920
+			}
+		],
+		"videoDevice": [
+			{
+				"deviceParam": {
+					"colorSpace": 1,
+					"deviceName": "@device:pnp:\\\\?\\usb_vid_046d&pid_081b&mi_00_6&21bd27d1&0&0000_{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\{bbefb6c7-2fc4-4139-bb8b-a58bba724083}",
+					"displayName": "Logitech HD Webcam C310 (046d:081b)",
+					"fps": 25,
+					"height": 720,
+					"resolutions": [[
+							160,
+							120
+						],[
+							176,
+							144
+						],[
+							320,
+							176
+						],[
+							320,
+							240
+						],[
+							352,
+							288
+						],[
+							432,
+							240
+						],[
+							544,
+							288
+						],[
+							640,
+							360
+						],[
+							640,
+							480
+						],[
+							752,
+							416
+						],[
+							800,
+							448
+						],[
+							800,
+							600
+						],[
+							864,
+							480
+						],[
+							960,
+							544
+						],[
+							960,
+							720
+						],[
+							1024,
+							576
+						],[
+							1184,
+							656
+						],[
+							1280,
+							720
+						],[
+							1280,
+							960
+						]
+					],
+					"width": 1280
+				},
+				"deviceType": 0,
+				"id": 1
+			}
+		]
+	},
+	"vgaCom": {}
+}

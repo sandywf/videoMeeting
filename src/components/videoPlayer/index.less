@@ -1,0 +1,101 @@
+//视频播放器的video
+
+.video-player{
+	overflow: hidden;
+	&.full-screen{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		z-index: 1000;
+		height: 100% !important;
+	}
+	&.small-screen{
+		.play-time{
+			.progress{
+				margin: 0px;
+			    position: absolute;
+			    top: -2px;
+			    left: -1px;
+			    width: calc( 100% + 8px);
+			}
+		}
+	}
+	position: relative;
+	background:white;
+	video,.video-dom{
+		width: 100%;
+		height: 100%;
+	}
+	.play-controls{
+		background: rgba(255,255,255,.6);
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		height: 30px;
+		display: flex;
+		padding : 0px 10px;
+		align-items: center;
+		i{
+			padding: 0px 5px;
+		}
+		.play-audio{
+			margin-left: auto;
+		}
+		
+		.play-time{
+			flex: 1;
+			display: flex;
+			align-items: center;
+			.play-time-show{
+				font-size: 14px;
+			}
+		}
+		.play-audio{
+			display: flex;
+			align-items: center;
+			max-width: 130px;
+    		flex: 0.5;
+		}
+		
+	}
+}
+
+.progress{
+	margin: 0 10px 0px 0px;
+	flex:1;
+	position: relative;
+	height: 8px;
+	.progress-range{
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		position: absolute;
+		left: 0px;
+		top: 50%;
+		z-index: 5;
+		transform: translateY(-50%);
+	}
+	.progress-bar{
+		width: calc( 100% - 8px );
+		height: 100%;
+		height: 4px;
+		margin-top: 2px;
+		border-radius: 2px;
+		position: relative;
+	}
+	.progress-btn{
+		width: 8px;
+		height: 8px;
+		border-radius: 4px;
+		position: absolute;
+		left: 0px;
+		top: 50%;
+		z-index: 4;
+		transform: translateY(-50%);
+		background: white;
+		box-shadow: 1px 1px 3px 1px  rgba(0,0,0,0.3);
+	}
+}

@@ -1,0 +1,355 @@
+//引入公共的less配置
+@import '~@/config/theme.less';
+@keyframes changeRecordTag {
+    from {
+        color: #e0e0e0;
+    }
+    to {
+        color: #c03131;
+    }
+}
+
+.green-btn{
+	background-color: @green;
+	color: #fff;
+}
+
+.mainHeader{
+	user-select:none;
+	&.hide{
+		height: 0;
+		.switch{
+			bottom: -20px;
+		}
+		.inner{
+			transform: translateY(-40px);
+		}
+	}
+	transition : all 0.3s;
+    background: @headBg;
+    border-bottom: 2px solid #000;
+    position: relative;
+    height: 40px;
+    .inner {
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition: transform 0.3s;
+    }
+    h4.title {
+        color: #ececec;
+        font-size: 14px;
+        margin-left: 14px;
+        max-width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .prompt {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        margin-left: 20px;
+        background: @black;
+        color: @promptColor;
+        height: 33px;
+        padding: 0 10px;
+        border-radius: 6px;
+        :global {
+            .iconfont {
+                font-size: 18px;
+                padding-right: 3px;
+            }
+            .icon-cancel-polling {
+                color: @green;
+            }
+            .icon-locking{
+            	color: #ececec !important;
+            }
+        }
+        .notice {
+            display: flex;
+            align-items: center;
+            .green {
+                color: @green;
+            }
+        }
+        //按钮模块
+        .btn {
+            cursor: pointer;
+            height: 26px;
+            display: inline-block;
+            padding: 0px 10px 0px 5px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            &:hover {
+                background: @selectTagBg;
+                color: @green;
+                &.btn-warn {
+                    color: @lightRed;
+                }
+                .show-hover {
+                    display: inline;
+                }
+                .show-state {
+                    display: none;
+                }
+            }
+            .show-state {
+                color: @green;
+            }
+            .show-hover {
+                display: none;
+            }
+        }
+        .record-tag {
+            //animation: changeRecordTag 1s ease-in-out infinite alternate;
+        }
+    }
+    .right-operation {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        .operation {
+            cursor: pointer;
+            height: 26px;
+            line-height: 26px;
+            padding: 0px 10px;
+            vertical-align: middle;
+            margin-left: 10px;
+            min-width: 40px;
+            text-align: center;
+            >i {
+                display: inline-block;
+                color: @green;
+                font-size: 24px;
+                position: relative;
+                :global{
+                	.icon-disable{
+                		position: absolute;
+                		bottom: -2px;
+                		right: -2px;
+                		font-size: 16px !important;
+                		color: @lightRed;
+                		line-height: 15px;
+                	}
+                }
+            }
+            &.selected,
+            &.hover:hover {
+                background: @selectTagBg;
+                border-radius: 4px;
+                >i {
+                    color: white;
+                }
+                .main-screen>span {
+                    background: white;
+                }
+            }
+            .main-screen {
+                //切换主画面
+                display: inline-block;
+                >span {
+                    text-align: center;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    border-radius: 8px;
+                    background: @green;
+                    display: inline-block;
+                    font-size: 12px;
+                    color: @headBg;
+                }
+                ul {
+                    width: 180px;
+                    li {
+                        padding: 0px 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        span:first-child{
+                        	flex: 1;
+                        	overflow: hidden;
+                        	text-overflow: ellipsis;
+                        	white-space: nowrap;
+                        	padding-right: 5px;
+                        }
+                        span:nth-child(2) {
+                            color: @greenTag;
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+            &.video-settings i {
+                font-size: 22px;
+            }
+            &.close {
+                margin-right: 22px;
+                width: 60px;
+            }
+        }
+        // 进度条
+        .progress {
+            display: inline-flex;
+            align-items: center;
+        }
+        .bar {
+            top: 5px;
+            position: relative;
+            flex: 1;
+            border-left: 90px solid transparent;
+            border-bottom: 5px solid #c3c3c3;
+        }
+        .percent {
+            position: absolute;
+            flex: 1 1;
+            left: -90px;
+            top: 1px;
+            border-left: 33px solid transparent;
+            border-bottom: 4px solid #63bf53;
+        }
+        .drag-handle {
+            position: absolute;
+            background: #fff;
+            padding: 3px;
+            border-radius: 50%;
+            border: 3px solid #62bf52;
+            left: -69px;
+            top: -3px;
+        }
+        // 跟多操作的下拉列表
+        .more-operation {
+            position: relative;
+            .title {
+                color: #63bf53;
+                font-size: 14px;
+            }
+            &.selected,
+            &.hover:hover {
+                .title {
+                    color: white;
+                }
+                &>div:after {
+                    border-top: 5px solid white;
+                }
+            }
+            &.no-event{
+            	pointer-events: none;
+            }
+            >div:after {
+                display: inline-block;
+                content: '';
+                margin-left: 5px;
+                transform: translateY(2px);
+                border: 5px solid transparent;
+                border-top: 5px solid @green;
+            }
+        }
+        //下拉功能菜单
+        .drop-down {
+            //min-width: 50px;
+            text-align: center;
+            position: relative;
+            &.selected {
+                background: @selectTagBg;
+                border-radius: 4px;
+                .drop-ul {
+                    z-index: 11;
+                }
+            }
+            
+            &.hover:hover {
+                background: @selectTagBg;
+                border-radius: 4px;
+                .drop-ul {
+                    display: block;
+                }
+            }
+            .drop-ul {
+            	z-index: 11;
+                display: none;
+                position: absolute;
+                z-index: 10;
+                text-align: center;
+                font-size: 12px;
+                background: rgba(234,234,234,0.75);
+                border-radius: 4px;
+                color: #353535;
+                right: -40px;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, 8px);
+                box-shadow: 0 0 8px 1px rgba(0,0,0,0.5);
+                cursor: pointer;
+                min-width: 120px;
+                line-height: 32px;
+                &.drop-ul-show {
+                    display: block;
+                }
+                >li {
+                    &.selected {
+                        background: #5555554d;
+                    }
+                    &:hover {
+                        background: #7777774d;
+                    }
+                    &:first-child {
+                        &:after {
+                            display: none;
+                            content: '';
+                            border: 8px solid transparent;
+                            position: absolute;
+                            top: -16px;
+                            transform: translate(-50%, 0px);
+                            left: 50%;
+                        }
+                        &:hover:after {
+                            display: block;
+                            z-index: 11;
+                            border-bottom: 8px solid #7777774d;
+                        }
+                        &.selected:after {
+                            z-index: 10;
+                            display: block;
+                            border-bottom: 8px solid #5555554d;
+                        }
+                    }
+                }
+                &::after {
+                    content: '';
+                    border: 8px solid transparent;
+                    position: absolute;
+                    top: -16px;
+                    border-bottom: 8px solid #d5d5d5;
+                    z-index: 9;
+                    left: 50%;
+                    transform: translate(-50%, 0px);
+                }
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 8px;
+                    position: absolute;
+                    top: -8px;
+                    z-index: 8;
+                    left: 0px;
+                }
+            }
+        }
+    }
+    .switch {
+        position: absolute;
+        bottom: -18px;
+        cursor: pointer;
+        z-index: 100;
+        left: 50%;
+        margin-left: -40px;
+    }
+    &.hide-top .inner {
+        height: 0;
+        overflow: hidden;
+    }
+}
